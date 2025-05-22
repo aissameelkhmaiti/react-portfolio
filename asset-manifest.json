@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/aissameelkhmaiti/react-portfolio.git/static/css/main.3837c2fb.css",
+    "main.js": "/aissameelkhmaiti/react-portfolio.git/static/js/main.f61713bb.js",
+    "static/media/tradenza.webp": "/aissameelkhmaiti/react-portfolio.git/static/media/tradenza.c300b8f3a6f991837f27.webp",
+    "static/media/xenia.webp": "/aissameelkhmaiti/react-portfolio.git/static/media/xenia.03b55d91ca4694940192.webp",
+    "static/media/rebuild-hub.webp": "/aissameelkhmaiti/react-portfolio.git/static/media/rebuild-hub.be14364efd45b462b08a.webp",
+    "static/media/editorial.webp": "/aissameelkhmaiti/react-portfolio.git/static/media/editorial.01c2f44f445ccf8ec1df.webp",
+    "static/media/oj.webp": "/aissameelkhmaiti/react-portfolio.git/static/media/oj.b2f9e95c21c37bf7793a.webp",
+    "index.html": "/aissameelkhmaiti/react-portfolio.git/index.html",
+    "main.3837c2fb.css.map": "/aissameelkhmaiti/react-portfolio.git/static/css/main.3837c2fb.css.map",
+    "main.f61713bb.js.map": "/aissameelkhmaiti/react-portfolio.git/static/js/main.f61713bb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3837c2fb.css",
+    "static/js/main.f61713bb.js"
+  ]
+}
