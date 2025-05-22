@@ -29,22 +29,19 @@ export default function Navbar() {
       </div>
       <div className={`tabs ${showNav && 'mobile-tabs'}`}>
         <a onClick={closeMobileNav} href="#home" className="tab-button">
-          Home
+          Accueil
         </a>
         <a onClick={closeMobileNav} href="#experience" className="tab-button">
-          Experience
+          Expérience
         </a>
         <a onClick={closeMobileNav} href="#projects" className="tab-button">
-          Projects
-        </a>
-        <a onClick={closeMobileNav} href="#blogs" className="tab-button">
-          Blogs
+          Projets
         </a>
         <a onClick={closeMobileNav} href="#skills" className="tab-button">
-          Skills
+          Compétences
         </a>
         <a onClick={closeMobileNav} href="#about" className="tab-button">
-          About
+          À propos
         </a>
       </div>
     </div>

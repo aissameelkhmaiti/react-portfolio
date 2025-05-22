@@ -1,15 +1,15 @@
 import React from 'react';
-import { getDriveUrlById } from '../utils';
+
 
 export default function Experience() {
   return (
-    <div className=" mx-auto max-w-6xl p-5 py-8 md:py-20" id="experience">
+    <div className="mx-auto max-w-6xl p-5 py-8 md:py-20" id="experience">
       <div className="mb-8 md:mb-16 pb-4 text-6xl font-medium text-gray-300 md:text-left md:text-7xl">
-        Experience
+        Expérience
       </div>
       {experiences.map((exp) => {
         return (
-          <div className=" mb-10" key={`experience${exp.company}`}>
+          <div className="mb-10" key={`experience-${exp.company}`}>
             <div className="mb-2 flex flex-row items-center border-b-[1px] border-b-gray-200 pb-2">
               <div className="mr-4 flex h-[32px] w-[32px] items-center justify-center">
                 <img
@@ -18,7 +18,7 @@ export default function Experience() {
                     exp.img ||
                     'https://icons.veryicon.com/png/o/miscellaneous/zr_icon/company-23.png'
                   }
-                  alt=""
+                  alt={exp.company}
                   onClick={() => window.open(exp.companyUrl || window.location, '_blank')}
                 />
               </div>
@@ -34,10 +34,10 @@ export default function Experience() {
               </div>
             </div>
 
-            <div className=" pl-4 tracking-wide text-sm text-gray-500">
+            <div className="pl-4 tracking-wide text-sm text-gray-500">
               <ul className="list-disc">
                 {exp.details.map((detail, index) => (
-                  <li key={`exp-details${index + exp.company}`}>{detail}</li>
+                  <li key={`exp-details-${index}-${exp.company}`}>{detail}</li>
                 ))}
               </ul>
             </div>
@@ -50,56 +50,50 @@ export default function Experience() {
 
 const experiences = [
   {
-    position: 'SDE 1 Full-Stack',
-    company: 'Upstox',
+    position: 'Développeur Full Stack MERN JS',
+    company: 'Ark x Talent Factory',
+    date: 'Janvier 2024 - Juin 2024',
+    companyUrl: '',
+
     details: [
-      'Architected a comprehensive and portable notification service capable of delivering Email, SMS, and push notifications to 10M+ users on both mobile apps and the web with the help of Java Spring Boot and Apache Kafka.',
-      'Spearheaded implementation of data retrieval jobs from services like Morningstar, leveraging Thread Pools for async data handling; streamlined processes, reducing data retrieval time by 50% and achieving 99.9% job success rate.',
-      'Utilized advanced monitoring and bug resolution tools such as Prometheus, Athena, Sumo Logic, and Datadog to ensure proactive monitoring and efficient bug resolution within the software ecosystem.',
-      'Worked on a Rundeck Job to fetch active IPO details at a specific interval from NSE and update on Upstox’s platform.',
-      'HolidayMaster processor to update trading holidays from a CSV file into MySQL using java.nio.',
-      'Service to generate portfolio statement of the user in the form of PDF file using Thymeleaf template engine.',
-      'Spearheaded the development of Personal Loans and Peer-to-Peer investing platforms, crafting intricate UI components for user-friendly loan configuration and optimal selection.',
-      'Engineered Government Bonds securities and Sovereign gold bonds applications with Next.js, significantly enhancing performance by reducing bundle size from 5.13MB to 735KB, thereby minimizing loading times.',
-      'Created Personal Loans and Peer-to-peer investing web applications using Next.js, this platform is used by 50k people on an average monthly.',
+      "Conception et développement d'une application de blog avec Node.js, Express, MongoDB, React et Tailwind CSS.",
+      "Responsable de l'architecture logicielle, des API RESTful, et de l'interface utilisateur réactive pour une expérience utilisateur optimale.",
+      "Implémentation complète d'un site e-commerce en utilisant Node.js, Express, MongoDB, React et Tailwind CSS.",
+      "Gestion des problèmes Git et résolution efficace des issues rencontrées tout au long du processus de développement.",
+      "Application Web Meteo avec HTML, CSS , JavaScript , REST API.",
     ],
-    date: 'Aug 2023 - Present',
-    img: 'https://media.licdn.com/dms/image/C4E0BAQHqu3S3cd_R-g/company-logo_200_200/0/1631600709019/upstox_logo?e=1720656000&v=beta&t=sIlL9hdqYlnj0_rKh6CMDz7r-5E781VALgnJnc7IQlk',
-    companyUrl: 'https://upstox.com/',
   },
   {
-    position: 'SDE Intern',
-    company: 'Upstox',
+    position: 'Développeur web',
+    company: 'OCP Jorf Lasfar',
+    date: 'Avril 2023 - Juin 2023',
+    companyUrl: 'https://www.ocpgroup.ma/',
+
     details: [
-      'Designed and implemented a file processor service utilizing java.nio to facilitate the seamless update of trading holiday, order details, and fund information from CSV files into a MySQL database.',
-      'Contributed to migrating the IPO backend service from Node.js to Spring Boot, enhancing concurrency and strengthening platform reliability within the Java ecosystem, resulting in improved performance and scalability.',
-      'Contributed to enhancing the user interface of mutual funds and IPO applications, leveraging React.JS for development.',
+      "Création d'une application web de gestion des incidents.",
+      "Technologies utilisées : HTML, CSS, JavaScript, Ajax, PHP, SQL, Bootstrap.",
     ],
-    date: 'Jan 2022 - Jul 2023',
-    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHiwLODfSkJb0pWA7g_GUM-lZ80WNm5fbz0c-kVD7ShQ&s',
-    companyUrl: 'https://upstox.com/',
   },
   {
-    position: 'SDE Intern',
-    company: 'Finlegal Business Solutions Pvt. Ltd.',
+    position: 'Projets Académiques',
+    company: 'FST Settat',
+    date: 'Septembre 2023 - Juin 2024',
+    companyUrl: 'https://www.fsts.ac.ma/',
+  
     details: [
-      'Worked on an application facilitating patients to book appointments with doctors across multiple organizations.',
-      'Leveraged Next.js for frontend development and Storybook for efficient frontend component creation.',
-      'Employed Express.js, GraphQL, PostgreSQL, and AWS S3 for API development.',
+      "Création d'un site web E-commerce avec HTML, CSS, Bootstrap, PHP, MySQL.",
+      "Développement d'une application calculatrice interactive avec JavaFX et FXML.",
     ],
-    date: 'Nov 2021 - Jan 2022',
-    img: 'https://quoppo.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F1257ac6f-9946-42db-b9e2-f3cc144c8f6f%2Flogo-quoppo.svg?table=block&id=4cb5c073-3ad4-4778-917f-36d5fbf14a96&spaceId=011a789e-d422-42dc-b920-56a90df1c604&userId=&cache=v2',
-    companyUrl: 'https://quoppo.notion.site/',
   },
   {
-    position: 'Full-Stack Developer Intern',
-    company: 'Sorceo Technologies Pvt. Ltd.',
+    position: 'Créateur de contenu digital',
+    company: 'Auto-entrepreneur',
+    date: '2023 - Présent',
+    companyUrl: 'https://www.instagram.com/',
+   
     details: [
-      'Developed a Vendor Management System and Auction Platform, incorporating secure authentication with Auth0. Utilized Express.js, React.js, and Redux for efficient implementation.',
-      'Built a globally-serving platform catering to top multinational corporations.',
+      "Création de visuels pour des publications Facebook et Instagram à l'aide de Canva.",
+      "Montage vidéo avec Filmora.",
     ],
-    date: 'Aug 2021 - Oct 2021',
-    img: getDriveUrlById('1KZ58TeoC6spgG2HIJUwE8OTCyqR8bw-Q'),
-    companyUrl: 'http://www.sorceotech.com/',
   },
 ];

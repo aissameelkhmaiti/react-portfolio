@@ -6,7 +6,7 @@ import Footer from './components/footer';
 import Navbar from './components/navbar';
 // import Preloader from './components/preloader';
 import About from './pages/about';
-import Blogs from './pages/blogs';
+
 import BlogsInfo from './pages/blogsInfo';
 import Experience from './pages/experience';
 import Home from './pages/home';
@@ -36,7 +36,7 @@ function App() {
               <Home></Home>
               <Experience></Experience>
               <Projects></Projects>
-              <Blogs></Blogs>
+             
               <Skills></Skills>
               <About></About>
               <Footer></Footer>

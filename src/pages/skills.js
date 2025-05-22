@@ -4,7 +4,7 @@ export default function Skills() {
   return (
     <div className=" mx-auto max-w-6xl p-5 py-8 md:py-20" id="skills">
       <div className="mb-8 md:mb-16 pb-4 text-6xl font-medium text-gray-300 md:text-left md:text-7xl">
-        Skills
+        Compétences
       </div>
 
       <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
@@ -12,7 +12,7 @@ export default function Skills() {
           return (
             <div className="flex items-center space-x-2" key={`skill${index}`}>
               {skill.icon && <div className="text-2xl flex">{skill.icon}</div>}
-              {skill.img && <img src={skill.img} className="h-6 w-6" alt=""></img>}
+              {skill.img && <img src={skill.img} className="h-6 w-6" alt={skill.skill}></img>}
               <div className=" text-gray-500">{skill.skill}</div>
             </div>
           );
@@ -24,18 +24,6 @@ export default function Skills() {
 
 const skills = [
   {
-    icon: <i className="devicon-spring-plain colored"></i>,
-    skill: 'Spring',
-  },
-  {
-    icon: <i className="devicon-go-original-wordmark colored"></i>,
-    skill: "Go",
-  },
-  {
-    icon: <i className="devicon-apachekafka-original colored"></i>,
-    skill: 'Apache Kafka',
-  },
-  {
     icon: <i className="devicon-nodejs-plain colored"></i>,
     skill: 'Node JS',
   },
@@ -44,20 +32,12 @@ const skills = [
     skill: 'Express JS',
   },
   {
-    icon: <i className="devicon-nginx-original colored"></i>,
-    skill: 'Nginx',
-  },
-  {
     icon: <i className="devicon-react-original colored"></i>,
     skill: 'React',
   },
   {
     icon: <i className="devicon-redux-original colored"></i>,
     skill: 'Redux',
-  },
-  {
-    icon: <i className="devicon-storybook-plain colored"></i>,
-    skill: 'Storybook',
   },
   {
     icon: <i className="devicon-bootstrap-plain colored"></i>,
@@ -80,16 +60,8 @@ const skills = [
     skill: 'Postman',
   },
   {
-    img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg',
-    skill: 'C++',
-  },
-  {
     img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',
     skill: 'Java',
-  },
-  {
-    img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
-    skill: 'Python',
   },
   {
     img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg',
@@ -112,15 +84,32 @@ const skills = [
     skill: 'MySQL',
   },
   {
-    img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-plain.svg',
-    skill: 'PostgreSQL',
-  },
-  {
-    img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg',
-    skill: 'Redis',
-  },
-  {
     img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg',
     skill: 'Docker',
+  },
+  // Added new skills here
+  {
+    img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
+    skill: 'GitHub',
+  },
+  {
+    img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg',
+    skill: 'WordPress',
+  },
+  {
+    img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg',
+    skill: 'PHP',
+  },
+  {
+    img: 'https://cdn-icons-png.flaticon.com/512/5968/5968885.png', // Canva icon (from Flaticon)
+    skill: 'Canva',
+  },
+  {
+    img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg',
+    skill: 'Figma',
+  },
+  {
+    img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
+    skill: 'Next.js',
   },
 ];

@@ -2,6 +2,9 @@ import React from 'react';
 import { getDriveUrlById } from '../utils';
 
 export default function About() {
+  // Lien direct vers ton fichier PDF (il faut un lien direct, pas la page Google Drive)
+  const resumeDownloadLink = 'https://drive.google.com/file/d/1zhZAyH1DADmtjs68H5sb7iHodyCt0483/view?usp=drive_link';
+
   return (
     <div className=" mx-auto max-w-6xl p-5 py-8 md:py-20" id="about">
       <div className="mb-8 md:mb-16 pb-4 text-6xl font-medium text-gray-300 md:text-left md:text-7xl">
@@ -14,20 +17,13 @@ export default function About() {
             src={getDriveUrlById('1zMOinHcdi5Jx1C6yAkU8P9ZGZz3gXFXp')}
             className="mx-auto h-52 w-52 rounded-full"
             alt=""
-          ></img>
+          />
         </div>
         <div className="basis-2/3 space-y-4">
-          <span className="text-xl text-gray-500">Hi, I am </span>
-          <div className="text-4xl font-bold text-cyan-500">Vedant Daigavane</div>
-          <div className="text-xl font-semibold text-gray-500">Passionate Coder & Trader</div>
+          <span className="text-xl text-gray-500"> Salut, je suis </span>
+          <div className="text-4xl font-bold text-cyan-500">Aissame El Khmaiti</div>
           <div className="text-justify font-light text-gray-400">
-            I am a highly enthusiastic and competitive person who enjoys being around individuals
-            who challenge my limits, and I, in turn, strive to push them as well. I have a passion
-            for acquiring new skills and sharing my knowledge. Taking on complex challenges is a
-            personal passion of mine. I prefer not to adhere to a single technique for an extended
-            period and instead proactively seek alternative approaches to tasks. I strongly believe
-            that being a jack of all trades and master of none is often better than being a master
-            of one.
+            Je suis une personne très enthousiaste et compétitive qui aime être entourée de personnes qui repoussent mes limites, et à mon tour, je m’efforce de les pousser aussi. J’ai une passion pour l’acquisition de nouvelles compétences et le partage de mes connaissances. Relever des défis complexes est une passion personnelle. Je préfère ne pas m’en tenir à une seule technique trop longtemps et cherche activement des approches alternatives pour les tâches. Je crois fermement qu’être un touche-à-tout sans être expert dans un seul domaine est souvent préférable à être maître d’un seul.
           </div>
         </div>
       </div>
@@ -42,15 +38,17 @@ export default function About() {
                 rel="noreferrer"
                 className="relative rounded-full"
               >
-                <img src={link.icon} className="h-10 w-10" alt=""></img>
+                <img src={link.icon} className="h-10 w-10" alt="" />
               </a>
             );
           })}
         </div>
+
+        {/* Lien de téléchargement direct du CV */}
         <a
           className="relative m-auto flex w-max cursor-pointer items-center space-x-4 rounded-lg border bg-slate-200 p-2 px-10"
-          href={'https://drive.google.com/file/d/1y07DZdv7oPGucnDmmwLa_DWzNCjbxTyY/view'}
-          target={'_blanck'}
+          href={resumeDownloadLink}
+          download="CV_Aissame_El_Khmaiti.pdf"
           rel="noreferrer"
         >
           <div>Resume</div>
@@ -58,7 +56,7 @@ export default function About() {
             className="h-6 w-6"
             src="https://img.icons8.com/material-outlined/48/000000/link--v1.png"
             alt=""
-          ></img>
+          />
         </a>
       </div>
     </div>
@@ -68,18 +66,18 @@ export default function About() {
 const social = [
   {
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg',
-    link: 'https://www.linkedin.com/in/vedant-daigavane-25785315a/',
+    link: 'https://www.linkedin.com/in/aissame-elkhmaiti/',
   },
   {
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
-    link: 'https://github.com/daigavane70',
+    link: 'https://github.com/aissameelkhmaiti',
   },
   {
     icon: 'https://cdn-icons-png.flaticon.com/512/1384/1384063.png',
-    link: 'https://www.instagram.com/vedant_daigavane/',
+    link: 'https://www.instagram.com/aissame_elkhmaiti/',
   },
   {
     icon: 'https://cdn-icons-png.flaticon.com/512/732/732200.png',
-    link: 'mailto: daigavane70@gmail.com',
+    link: 'mailto: aissameelkhmaiti@gmail.com',
   },
 ];
